@@ -1,0 +1,33 @@
+<center><h2>Reporte de Asignaciones</h2></center>
+<table class="table table-striped table-bordered" width="100%">
+	<tr>
+		<td width="30%" style="vertical-align:middle;">
+			<div style="width:200px; height150px; margin:auto;">
+				<canvas id="chart-area2" width="200" height="150"/>
+			</div>
+		</td>
+		<td width="70%">
+			<?php
+				$a = $consultas_numero_asignacionesHoy + $consultas_numero_pendientes;
+				$b = $consultas_numero_asignacionesTotal - $a;
+			?>
+			<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+				<tr>
+					<th style="width:5%;"><span class="label label-info"><?= $consultas_numero_asignacionesHoy ?></span></th><td style="width:95%;">Para Hoy</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-danger"><?= $consultas_numero_pendientes ?></span></th><td>Atrasadas</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-primary"><?= $b ?></span></th><td>Total Realizadas</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label" style="background-color:black;"><?= $consultas_numero_asignacionesTotal ?></span></th><td>Total</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-default"><?= $consultas_numero_sinAsignacionesTotal ?></span></th><td>Sin Asignaciones</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

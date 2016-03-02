@@ -1,0 +1,52 @@
+<?php
+	
+	if ($_SESSION['filtroA'] == '') {
+		# $_SESSION['filtroA'] = $_POST['filtroA'];
+		$_SESSION['filtroA'] = $_GET['filtroA'];
+		$filtroA = $_SESSION['filtroA'];
+	}
+	else {
+
+	}
+
+	if ($_SESSION['filtroB'] == '') {
+		# $_SESSION['filtroB'] = $_POST['filtroB'];
+		$_SESSION['filtroB'] = $_GET['filtroB'];
+		$filtroB = $_SESSION['filtroB'];
+	}
+	else {
+		
+	}
+
+?>
+<div class="row">
+	<div class="col-md-12 col-lg-12">
+		<div class="btn-group" data-toggle="buttons">
+  			<a href="<?= $url ?>&filterStatus=2">
+  				<button type="button" class="btn btn-info btn-md" style="margin-left:5px;">
+  					<span class="glyphicon" aria-hidden="true"></span> Llamada
+				</button>
+  			</a>
+  			<a href="<?= $url ?>&filterStatus=3">
+  				<button type="button" class="btn btn-warning btn-md" style="margin-left:5px;">
+  					<span class="glyphicon" aria-hidden="true"></span> Correo
+				</button>
+  			</a>
+  			<a href="<?= $url ?>&filterStatus=4">
+  				<button type="button" class="btn btn-primary btn-md active" style="margin-left:5px;">
+  					<span class="glyphicon" aria-hidden="true"></span> Llamada y Correo
+				</button>
+  			</a>
+  			<a href="<?= $url ?>&filterStatus=5">
+  				<button type="button" class="btn btn-success btn-md" style="margin-left:5px;">
+  					<span class="glyphicon" aria-hidden="true"></span> Facturados
+				</button>
+  			</a>
+		</div>
+	</div>
+</div>
+
+<?php
+	$_SESSION['filtroA'] = '';
+	$_SESSION['filtroB'] = '';
+?>

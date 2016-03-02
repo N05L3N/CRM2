@@ -1,0 +1,541 @@
+<?php
+
+if ($filterDate1 == '--') { $filterDate1 = ''; } else { }
+if ($filterDate2 == '--') { $filterDate2 = ''; } else { }
+
+if ($dev == '') {
+	$coment1 = '';
+	$coment2 = '';
+}
+
+else {
+	$coment1 = '<!--';
+	$coment2 = '-->';
+}
+
+
+$total_telemarketing07 = $total_facturados_telemarketing07 + $total_correos_telemarketing07 + $total_llamadas_telemarketing07 + $total_llamadasycorreos_telemarketing07 + $total_descartados_telemarketing07;
+$total_telemarketing01 = $total_facturados_telemarketing01 + $total_correos_telemarketing01 + $total_llamadas_telemarketing01 + $total_llamadasycorreos_telemarketing01 + $total_descartados_telemarketing01;
+$total_telemarketing02 = $total_facturados_telemarketing02 + $total_correos_telemarketing02 + $total_llamadas_telemarketing02 + $total_llamadasycorreos_telemarketing02 + $total_descartados_telemarketing02;
+$total_telemarketing03 = $total_facturados_telemarketing03 + $total_correos_telemarketing03 + $total_llamadas_telemarketing03 + $total_llamadasycorreos_telemarketing03 + $total_descartados_telemarketing03;
+$total_telemarketing04 = $total_facturados_telemarketing04 + $total_correos_telemarketing04 + $total_llamadas_telemarketing04 + $total_llamadasycorreos_telemarketing04 + $total_descartados_telemarketing04;
+$total_telemarketing05 = $total_facturados_telemarketing05 + $total_correos_telemarketing05 + $total_llamadas_telemarketing05 + $total_llamadasycorreos_telemarketing05 + $total_descartados_telemarketing05;
+$total_telemarketing06 = $total_facturados_telemarketing06 + $total_correos_telemarketing06 + $total_llamadas_telemarketing06 + $total_llamadasycorreos_telemarketing06 + $total_descartados_telemarketing06;
+$total_telemarketing08 = $total_facturados_telemarketing08 + $total_correos_telemarketing08 + $total_llamadas_telemarketing08 + $total_llamadasycorreos_telemarketing08 + $total_descartados_telemarketing08;
+$total_ventascat13 = $total_facturados_ventascat13 + $total_correos_ventascat13 + $total_llamadas_ventascat13 + $total_llamadasycorreos_ventascat13 + $total_descartados_ventascat13;
+$total_leticia = $total_facturados_leticia + $total_correos_leticia + $total_llamadas_leticia + $total_llamadasycorreos_leticia + $total_descartados_leticia;
+
+$total_telemarketing07Bar = $asignacionesHoy_telemarketing07 + $asignacionesTotal_telemarketing07 + $asignacionesAtrasados_telemarketing07;
+$total_telemarketing01Bar = $asignacionesHoy_telemarketing01 + $asignacionesTotal_telemarketing01 + $total_llamadas_telemarketing01 + $total_llamadasycorreos_telemarketing01 + $total_descartados_telemarketing01;
+$total_telemarketing02Bar = $asignacionesHoy_telemarketing02 + $asignacionesTotal_telemarketing02 + $total_llamadas_telemarketing02 + $total_llamadasycorreos_telemarketing02 + $total_descartados_telemarketing02;
+$total_telemarketing03Bar = $asignacionesHoy_telemarketing03 + $asignacionesTotal_telemarketing03 + $total_llamadas_telemarketing03 + $total_llamadasycorreos_telemarketing03 + $total_descartados_telemarketing03;
+$total_telemarketing04Bar = $asignacionesHoy_telemarketing04 + $asignacionesTotal_telemarketing04 + $total_llamadas_telemarketing04 + $total_llamadasycorreos_telemarketing04 + $total_descartados_telemarketing04;
+$total_telemarketing05Bar = $asignacionesHoy_telemarketing05 + $asignacionesTotal_telemarketing05 + $total_llamadas_telemarketing05 + $total_llamadasycorreos_telemarketing05 + $total_descartados_telemarketing05;
+$total_telemarketing06Bar = $asignacionesHoy_telemarketing06 + $asignacionesTotal_telemarketing06 + $total_llamadas_telemarketing06 + $total_llamadasycorreos_telemarketing06 + $total_descartados_telemarketing06;
+$total_telemarketing08Bar = $asignacionesHoy_telemarketing08 + $asignacionesTotal_telemarketing08 + $total_llamadas_telemarketing08 + $total_llamadasycorreos_telemarketing08 + $total_descartados_telemarketing08;
+$total_ventascat13Bar = $asignacionesHoy_ventascat13 + $asignacionesTotal_ventascat13 + $total_llamadas_ventascat13 + $total_llamadasycorreos_ventascat13 + $total_descartados_ventascat13;
+$total_leticiaBar = $asignacionesHoy_leticia + $asignacionesTotal_leticia + $total_llamadas_leticia + $total_llamadasycorreos_leticia + $total_descartados_leticia;
+
+
+	if ($total_telemarketing01 == 0) { 
+		$Datostelemarketing01 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing01" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing01 = '<canvas id="chart-Statustelemarketing01" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing02 == 0) { 
+		$Datostelemarketing02 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing02" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing02 = '<canvas id="chart-Statustelemarketing02" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing03 == 0) { 
+		$Datostelemarketing03 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing03" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing03 = '<canvas id="chart-Statustelemarketing03" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing04 == 0) { 
+		$Datostelemarketing04 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing04" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing04 = '<canvas id="chart-Statustelemarketing04" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing05 == 0) { 
+		$Datostelemarketing05 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing05" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing05 = '<canvas id="chart-Statustelemarketing05" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing06 == 0) { 
+		$Datostelemarketing06 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing06" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing06 = '<canvas id="chart-Statustelemarketing06" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing07 == 0) { 
+		$Datostelemarketing07 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing07" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing07 = '<canvas id="chart-Statustelemarketing07" width="120" height="120"/>';
+	}
+
+	if ($total_telemarketing08 == 0) { 
+		$Datostelemarketing08 = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing08" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing08 = '<canvas id="chart-Statustelemarketing08" width="120" height="120"/>';
+	}
+
+	if ($total_ventascat13 == 0) { 
+		$DatosVentascat13 = '<div class="sinDatos"></div><canvas id="chart-StatusVentascat13" width="0" height="0"/>';
+	}
+	else {
+		$DatosVentascat13 = '<canvas id="chart-StatusVentascat13" width="120" height="120"/>';
+	}
+
+	if ($total_leticia == 0) { 
+		$DatosLeticia = '<div class="sinDatos"></div><canvas id="chart-StatusLeticia" width="0" height="0"/>';
+	}
+	else {
+		$DatosLeticia = '<canvas id="chart-StatusLeticia" width="120" height="120"/>';
+	}
+
+	# BAR
+	
+	if ($total_telemarketing01Bar == 0) { 
+		$Datostelemarketing01Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing01Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing01Bar = '<canvas id="chart-Statustelemarketing01Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing01Bar = '';
+
+	if ($total_telemarketing02Bar == 0) { 
+		$Datostelemarketing02Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing02Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing02Bar = '<canvas id="chart-Statustelemarketing02Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing02Bar = '';
+
+	if ($total_telemarketing03Bar == 0) { 
+		$Datostelemarketing03Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing03Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing03Bar = '<canvas id="chart-Statustelemarketing03Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing03Bar = '';
+
+	if ($total_telemarketing04Bar == 0) { 
+		$Datostelemarketing04Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing04Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing04Bar = '<canvas id="chart-Statustelemarketing04Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing04Bar = '';
+
+	if ($total_telemarketing05Bar == 0) { 
+		$Datostelemarketing05Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing05Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing05Bar = '<canvas id="chart-Statustelemarketing05Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing05Bar = '';
+
+	if ($total_telemarketing06Bar == 0) { 
+		$Datostelemarketing06Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing06Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing06Bar = '<canvas id="chart-Statustelemarketing06Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing06Bar = '';
+
+	if ($total_telemarketing07Bar == 0) { 
+		$Datostelemarketing07Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing07Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing07Bar = '<canvas id="chart-Statustelemarketing07Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing07Bar = '';
+
+	if ($total_telemarketing08Bar == 0) { 
+		$Datostelemarketing08Bar = '<div class="sinDatos"></div><canvas id="chart-Statustelemarketing08Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datostelemarketing08Bar = '<canvas id="chart-Statustelemarketing08Bar" width="80" height="80"/>';
+	}
+	$Datostelemarketing08Bar = '';
+
+	if ($total_ventascat13Bar == 0) { 
+		$DatosVentascat13Bar = '<div class="sinDatos"></div><canvas id="chart-StatusVentascat13Bar" width="0" height="0"/>';
+	}
+	else {
+		$DatosVentascat13Bar = '<canvas id="chart-StatusVentascat13Bar" width="80" height="80"/>';
+	}
+	$DatosVentascat13Bar = '';
+
+	if ($total_leticiaBar == 0) { 
+		$DatosLeticiaBar = '<div class="sinDatos"></div><canvas id="chart-StatusLeticiaBar" width="0" height="0"/>';
+	}
+	else {
+		$DatosLeticiaBar = '<canvas id="chart-StatusLeticiaBar" width="80" height="80"/>';
+	}
+	$DatosLeticiaBar = '';
+?>
+
+<style>
+	body {
+		background-color: #aaa;
+	}
+	div.sinDatos {
+		background-color:#EEE;
+		border-radius:120px;
+		width:120px;
+		height:120px;
+		border:1px solid black;
+	}
+</style>
+<form action="<?= $url ?>" method="post" id="filtrarporfecha2">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div style="height:8px; width:100%;"></div>
+    
+<div class="row">
+	<div class="col-lg-1 col-md-1 col-sm-1">
+		<a href="consultas.php" style="text-decoration:none;">
+			<h4 class="modal-title" style="color:white; margin:5px 0px 0px 10px;">
+				<button type="button" class="btn btn-danger btn-md" style="margin-top:-5px;">
+  					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Regresar
+				</button>
+			</h4>
+		</a>
+	</div>
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<h4 class="modal-title" id="myModalLabel" style="color:white; margin:5px 0px 0px 10px;">
+			<span class="glyphicon glyphicon-credit-card"></span> 
+			Telemarketing
+		</h4>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<div class="row" >
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Desde:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+					<div class="input-group input-group-md vista" id="campoparafecha">
+						<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde2" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+					</div>
+			</div>
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Hasta:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta2" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha2').submit();" style="margin:auto; margin-right:50px; text-align:left;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+  	</div>
+</div>
+<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">
+</form>
+
+	
+</nav>
+
+  <div class="row" style="margin-top:-5px;">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+
+			$tmp_Usuario = 'telemarketing01';
+			$tmp_Nombre = 'Nick Moreno';
+			$tmp_Telefono = 'Ext. 1136';
+			$tmp_Correo = 'telemarketing05@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing01;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing01;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing01;
+
+			$tmp_Grafica = $Datostelemarketing01;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing01;
+			$tmp_Grafica_Correos = $total_correos_telemarketing01;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing01;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing01;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing01;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing01;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing01;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing01;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing01;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing01;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing01;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing01;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing01;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing01;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing01;
+
+			/*
+			telemarketing02
+			telemarketing03
+			telemarketing04
+			telemarketing05
+			telemarketing06
+			telemarketing07
+			telemarketing08
+			ventascat13
+			leticia
+			*/
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	
+
+
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing02';
+			$tmp_Nombre = 'Nidia Contreras';
+			$tmp_Telefono = 'Ext. 1171';
+			$tmp_Correo = 'telemarketing03@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing02;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing02;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing02;
+
+			$tmp_Grafica = $Datostelemarketing02;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing02;
+			$tmp_Grafica_Correos = $total_correos_telemarketing02;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing02;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing02;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing02;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing02;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing02;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing02;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing02;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing02;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing02;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing02;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing02;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing02;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing02;
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+
+			$tmp_Usuario = 'telemarketing03';
+			$tmp_Nombre = 'Leslie Esparza';
+			$tmp_Telefono = 'Ext. 1154';
+			$tmp_Correo = 'telemarketing04@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing03;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing03;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing03;
+
+			$tmp_Grafica = $Datostelemarketing03;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing03;
+			$tmp_Grafica_Correos = $total_correos_telemarketing03;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing03;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing03;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing03;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing03;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing03;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing03;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing03;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing03;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing03;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing03;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing03;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing03;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing03;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing04';
+			$tmp_Nombre = 'Rubi Montoya';
+			$tmp_Telefono = 'Ext. 1101';
+			$tmp_Correo = 'telemarketing02@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing04;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing04;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing04;
+
+			$tmp_Grafica = $Datostelemarketing04;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing04;
+			$tmp_Grafica_Correos = $total_correos_telemarketing04;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing04;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing04;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing04;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing04;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing04;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing04;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing04;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing04;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing04;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing04;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing04;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing04;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing04;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing05';
+			$tmp_Nombre = 'Roberto Jurado';
+			$tmp_Telefono = 'Ext. 1166';
+			$tmp_Correo = 'telemarketing01@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing05;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing05;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing05;
+
+			$tmp_Grafica = $Datostelemarketing05;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing05;
+			$tmp_Grafica_Correos = $total_correos_telemarketing05;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing05;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing05;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing05;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing05;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing05;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing05;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing05;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing05;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing05;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing05;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing05;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing05;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing05;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing06';
+			$tmp_Nombre = 'Blanca Aragón';
+			$tmp_Telefono = 'Ext. 1299';
+			$tmp_Correo = 'telemarketing06@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing06;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing06;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing06;
+
+			$tmp_Grafica = $Datostelemarketing06;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing06;
+			$tmp_Grafica_Correos = $total_correos_telemarketing06;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing06;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing06;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing06;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing06;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing06;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing06;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing06;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing06;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing06;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing06;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing06;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing06;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing06;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing07';
+			$tmp_Nombre = 'telemarketing07 Aguirre';
+			$tmp_Telefono = 'Ext. 1113';
+			$tmp_Correo = 'telemarketing00@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing07;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing07;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing07;
+
+			$tmp_Grafica = $Datostelemarketing07;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing07;
+			$tmp_Grafica_Correos = $total_correos_telemarketing07;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing07;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing07;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing07;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing07;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing07;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing07;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing07;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing07;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing07;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing07;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing07;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing07;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing07;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'telemarketing08';
+			$tmp_Nombre = 'Bryan Lopéz';
+			$tmp_Telefono = '';
+			$tmp_Correo = 'telemarketing05@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_telemarketing08;
+			$tmp_semaforo_Total = $asignacionesTotal_telemarketing08;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_telemarketing08;
+
+			$tmp_Grafica = $Datostelemarketing08;
+			$tmp_Grafica_Facturados = $total_facturados_telemarketing08;
+			$tmp_Grafica_Correos = $total_correos_telemarketing08;
+			$tmp_Grafica_Llamadas = $total_llamadas_telemarketing08;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_telemarketing08;
+			$tmp_Grafica_Descartados = $total_descartados_telemarketing08;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_telemarketing08;
+			$tmp_contactoMedio_02 = $contactoMedio_02_telemarketing08;
+			$tmp_contactoMedio_03 = $contactoMedio_03_telemarketing08;
+			$tmp_contactoMedio_04 = $contactoMedio_04_telemarketing08;
+			$tmp_contactoMedio_05 = $contactoMedio_05_telemarketing08;
+			$tmp_contactoMedio_06 = $contactoMedio_06_telemarketing08;
+			$tmp_contactoMedio_07 = $contactoMedio_07_telemarketing08;
+			$tmp_contactoMedio_08 = $contactoMedio_08_telemarketing08;
+			$tmp_contactoMedio_09 = $contactoMedio_09_telemarketing08;
+			$tmp_contactoMedio_10 = $contactoMedio_10_telemarketing08;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>

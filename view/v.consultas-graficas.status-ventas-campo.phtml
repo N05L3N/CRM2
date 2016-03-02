@@ -1,0 +1,40 @@
+<h5>Ventas Campo ()</h5>
+<table class="table table-bordered striped table-condensed" style="width:100%; background-color:white;">
+	<tr>
+		<td width="30%" style="vertical-align:middle;">
+			<div style="width:120px; height120px; margin:auto;">
+				<canvas id="chart-StatusVentascampo" width="120" height="120"/>
+			</div>
+		</td>
+		<td width="70%">
+			<?php
+				$a = $consultas_numero_asignacionesHoy + $consultas_numero_pendientes;
+				$b = $consultas_numero_asignacionesTotal - $a;
+			?>
+			<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+				<tr>
+					<th class=""><span class="label label-success"><?= $total_facturadosVC ?></span></th><td>Facturado</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-warning"><?= $total_correosVC ?></span></th><td>Correo</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-info"><?= $total_llamadasVC ?></span></th><td>Llamada</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-primary"><?= $total_llamadasycorreosVC ?></span></th><td>Correo y Llamada</td>
+				</tr>
+				<tr>
+					<th style="width:5%;"><span class="label label-default"><?= $total_descartadosVC ?></span></th><td style="width:95%;">Descartado</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:center;">
+			<a href="if.consultas?iframe=04">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg4">Detalles.</button>
+			</a>
+		</td>
+	</tr>
+</table>

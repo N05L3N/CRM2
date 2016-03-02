@@ -1,0 +1,50 @@
+<?php
+
+	$id_youtube = array(
+		'1' => 'TXbQx7PqzjI', 
+		'2' => 'ioIl6G4QoRk', 
+		'3' => 'TH2ROqNKRWc', 
+		'4' => 'aq7em_glnmw', 
+		'5' => 'qQN0Z0NfcJg', 
+		'6' => 'qsEbp9BzP2w', 
+		'7' => '5rA-J7nMKYo', 
+		'8' => 'm51oD3djtVw', 
+		'9' => 'DztggX-3JIw', 
+		'10' => 'Ie2rx2C62jg', 
+		'11' => '2SWpRVC0kbo', 
+		'12' => 'OO1PTgDoIV0', 
+		'13' => '3k9OeE2YqsY', 
+		'14' => 'ruouX8WN4M0', 
+		'15' => 'dyI-RKdMcQM', 
+		'16' => 'LMP0-UO513A', 
+	);
+
+	$id_youtubeS = $_GET['id_youtube'];
+?>
+
+<div id="ago-contenedor">
+	<div class="video-principal">
+		<iframe src="//www.youtube.com/embed/<?= $id_youtubeS ?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<hr>
+	<br>
+	<div class="miniaturas">
+		<?php
+			for ($i=1; $i < 17; $i++) { 
+		?>
+		<figure class="figure">
+			<a href="software-para-renderizado-intericad-lite.videos.php?id_youtube=<?= $id_youtube[$i] ?>">
+				<!--<img src="img/intericad-lite/video/01.jpg" alt="">-->
+				<img src="http://img.youtube.com/vi/<?= $id_youtube[$i] ?>/1.jpg" alt="">
+			</a>
+		</figure>
+		<?php	
+			}
+			 echo '<h1>'.$id_youtubeS.'</h1>';
+		?>
+
+	</div>
+</div> 
+
+<div class="over-black"></div> 
+<div id="render-asociados"></div>

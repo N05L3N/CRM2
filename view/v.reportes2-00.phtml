@@ -1,0 +1,54 @@
+<?php
+	
+	# Queries
+
+	include('model/m.reportes2.php');
+	include('inc/menu-superior.php');
+
+	function dias_transcurridos($fecha_i,$fecha_f) {
+		
+		$dias = (strtotime($fecha_i)-strtotime($fecha_f))/86400;
+		$dias = abs($dias); $dias = floor($dias);		
+			
+		return $dias;
+	}
+
+	function dias_transcurridos_atrasados($fecha_i,$fecha_f) {
+		
+		$dias = (strtotime($fecha_i)-strtotime($fecha_f))/86400;
+		$dias = abs($dias); $dias = floor($dias);		
+		
+		$dias = $dias-30;
+
+		return $dias;
+	}
+
+	function dias_transcurridos_enproceso($fecha_i,$fecha_f) {
+		
+		$dias = (strtotime($fecha_i)-strtotime($fecha_f))/86400;
+		$dias = abs($dias); $dias = floor($dias);		
+
+		return $dias;
+	}
+
+	# 01 Dashboard
+
+	include('view/v.reportes2-01-dashboard.phtml');
+
+
+
+?>
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h3 class="page-header">Reportes</h3>
+<?php
+	# 02 Filtro por Fecha
+
+	include('view/v.reportes2-02-filtro-por-fecha.phtml');
+
+	# 03 Tabla
+
+	include('view/v.reportes2-03-tabla.phtml');
+
+?>
+</div>

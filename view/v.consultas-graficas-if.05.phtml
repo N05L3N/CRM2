@@ -1,0 +1,623 @@
+<?php
+
+if ($filterDate1 == '--') { $filterDate1 = ''; } else { }
+if ($filterDate2 == '--') { $filterDate2 = ''; } else { }
+
+if ($dev == '') {
+	$coment1 = '';
+	$coment2 = '';
+}
+
+else {
+	$coment1 = '<!--';
+	$coment2 = '-->';
+}
+
+/*
+1: g abriela
+2: a ngelica
+3: l cera
+4: l esparza
+5: r ubi
+6: m ario
+7: b aragon
+8: v entascat05
+9: v entascat13
+10: l eticia
+
+v entasequipo1$C4153
+v entasequipo2$fm2013rad10
+v entasequipo3$ls9690
+v entasequipo4$aprieto
+v entasequipo5$je7410
+v entasequipo6$rf9891
+v entasequipo7$ve7014
+
+a dmsoporte$C9669
+e quipomerida$C4405
+v entasequipo07$C2191
+e quiposguadalajara$C9998
+e quiposmonterrey$gg7118
+
+*/
+$total_user1 = $total_facturados_user1 + $total_correos_user1 + $total_llamadas_user1 + $total_llamadasycorreos_user1 + $total_descartados_user1;
+$total_user2 = $total_facturados_user2 + $total_correos_user2 + $total_llamadas_user2 + $total_llamadasycorreos_user2 + $total_descartados_user2;
+$total_user3 = $total_facturados_user3 + $total_correos_user3 + $total_llamadas_user3 + $total_llamadasycorreos_user3 + $total_descartados_user3;
+$total_user4 = $total_facturados_user4 + $total_correos_user4 + $total_llamadas_user4 + $total_llamadasycorreos_user4 + $total_descartados_user4;
+$total_user5 = $total_facturados_user5 + $total_correos_user5 + $total_llamadas_user5 + $total_llamadasycorreos_user5 + $total_descartados_user5;
+$total_user6 = $total_facturados_user6 + $total_correos_user6 + $total_llamadas_user6 + $total_llamadasycorreos_user6 + $total_descartados_user6;
+$total_user7 = $total_facturados_user7 + $total_correos_user7 + $total_llamadas_user7 + $total_llamadasycorreos_user7 + $total_descartados_user7;
+$total_user8 = $total_facturados_user8 + $total_correos_user8 + $total_llamadas_user8 + $total_llamadasycorreos_user8 + $total_descartados_user8;
+$total_user9 = $total_facturados_user9 + $total_correos_user9 + $total_llamadas_user9 + $total_llamadasycorreos_user9 + $total_descartados_user9;
+$total_user10 = $total_facturados_user10 + $total_correos_user10 + $total_llamadas_user10 + $total_llamadasycorreos_user10 + $total_descartados_user10;
+
+$total_user1Bar = $asignacionesHoy_user2 + $asignacionesTotal_user2 + $asignacionesAtrasados_user2;
+$total_user2Bar = $asignacionesHoy_user2 + $asignacionesTotal_user2 + $total_llamadas_user2 + $total_llamadasycorreos_user2 + $total_descartados_user2;
+$total_user3Bar = $asignacionesHoy_user3 + $asignacionesTotal_user3 + $total_llamadas_user3 + $total_llamadasycorreos_user3 + $total_descartados_user3;
+$total_user4Bar = $asignacionesHoy_user4 + $asignacionesTotal_user4 + $total_llamadas_user4 + $total_llamadasycorreos_user4 + $total_descartados_user4;
+$total_user5Bar = $asignacionesHoy_user5 + $asignacionesTotal_user5 + $total_llamadas_user5 + $total_llamadasycorreos_user5 + $total_descartados_user5;
+$total_user6Bar = $asignacionesHoy_user6 + $asignacionesTotal_user6 + $total_llamadas_user6 + $total_llamadasycorreos_user6 + $total_descartados_user6;
+$total_user7Bar = $asignacionesHoy_user7 + $asignacionesTotal_user7 + $total_llamadas_user7 + $total_llamadasycorreos_user7 + $total_descartados_user7;
+$total_user8Bar = $asignacionesHoy_user8 + $asignacionesTotal_user8 + $total_llamadas_user8 + $total_llamadasycorreos_user8 + $total_descartados_user8;
+$total_user9Bar = $asignacionesHoy_user9 + $asignacionesTotal_user9 + $total_llamadas_user9 + $total_llamadasycorreos_user9 + $total_descartados_user9;
+$total_user10Bar = $asignacionesHoy_user10 + $asignacionesTotal_user10 + $total_llamadas_user10 + $total_llamadasycorreos_user10 + $total_descartados_user10;
+
+
+	if ($total_user2 == 0) { 
+		$Datosuser2 = '<div class="sinDatos"></div><canvas id="chart-Statususer2" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser2 = '<canvas id="chart-Statususer2" width="120" height="120"/>';
+	}
+
+	if ($total_user3 == 0) { 
+		$Datosuser3 = '<div class="sinDatos"></div><canvas id="chart-Statususer3" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser3 = '<canvas id="chart-Statususer3" width="120" height="120"/>';
+	}
+
+	if ($total_user4 == 0) { 
+		$Datosuser4 = '<div class="sinDatos"></div><canvas id="chart-Statususer4" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser4 = '<canvas id="chart-Statususer4" width="120" height="120"/>';
+	}
+
+	if ($total_user5 == 0) { 
+		$Datosuser5 = '<div class="sinDatos"></div><canvas id="chart-Statususer5" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser5 = '<canvas id="chart-Statususer5" width="120" height="120"/>';
+	}
+
+	if ($total_user6 == 0) { 
+		$Datosuser6 = '<div class="sinDatos"></div><canvas id="chart-Statususer6" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser6 = '<canvas id="chart-Statususer6" width="120" height="120"/>';
+	}
+
+	if ($total_user7 == 0) { 
+		$Datosuser7 = '<div class="sinDatos"></div><canvas id="chart-Statususer7" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser7 = '<canvas id="chart-Statususer7" width="120" height="120"/>';
+	}
+
+	if ($total_user1 == 0) { 
+		$Datosuser1 = '<div class="sinDatos"></div><canvas id="chart-Statususer1" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser1 = '<canvas id="chart-Statususer1" width="120" height="120"/>';
+	}
+
+	if ($total_user8 == 0) { 
+		$Datosuser8 = '<div class="sinDatos"></div><canvas id="chart-Statususer8" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser8 = '<canvas id="chart-Statususer8" width="120" height="120"/>';
+	}
+
+	if ($total_user9 == 0) { 
+		$Datosuser9 = '<div class="sinDatos"></div><canvas id="chart-Statususer9" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser9 = '<canvas id="chart-Statususer9" width="120" height="120"/>';
+	}
+
+	if ($total_user10 == 0) { 
+		$Datosuser10 = '<div class="sinDatos"></div><canvas id="chart-Statususer10" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser10 = '<canvas id="chart-Statususer10" width="120" height="120"/>';
+	}
+
+	# BAR
+	
+	if ($total_user2Bar == 0) { 
+		$Datosuser2Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer2Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser2Bar = '<canvas id="chart-Statususer2Bar" width="80" height="80"/>';
+	}
+	$Datosuser2Bar = '';
+
+	if ($total_user3Bar == 0) { 
+		$Datosuser3Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer3Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser3Bar = '<canvas id="chart-Statususer3Bar" width="80" height="80"/>';
+	}
+	$Datosuser3Bar = '';
+
+	if ($total_user4Bar == 0) { 
+		$Datosuser4Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer4Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser4Bar = '<canvas id="chart-Statususer4Bar" width="80" height="80"/>';
+	}
+	$Datosuser4Bar = '';
+
+	if ($total_user5Bar == 0) { 
+		$Datosuser5Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer5Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser5Bar = '<canvas id="chart-Statususer5Bar" width="80" height="80"/>';
+	}
+	$Datosuser5Bar = '';
+
+	if ($total_user6Bar == 0) { 
+		$Datosuser6Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer6Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser6Bar = '<canvas id="chart-Statususer6Bar" width="80" height="80"/>';
+	}
+	$Datosuser6Bar = '';
+
+	if ($total_user7Bar == 0) { 
+		$Datosuser7Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer7Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser7Bar = '<canvas id="chart-Statususer7Bar" width="80" height="80"/>';
+	}
+	$Datosuser7Bar = '';
+
+	if ($total_user1Bar == 0) { 
+		$Datosuser1Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer1Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser1Bar = '<canvas id="chart-Statususer1Bar" width="80" height="80"/>';
+	}
+	$Datosuser1Bar = '';
+
+	if ($total_user8Bar == 0) { 
+		$Datosuser8Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer8Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser8Bar = '<canvas id="chart-Statususer8Bar" width="80" height="80"/>';
+	}
+	$Datosuser8Bar = '';
+
+	if ($total_user9Bar == 0) { 
+		$Datosuser9Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer9Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser9Bar = '<canvas id="chart-Statususer9Bar" width="80" height="80"/>';
+	}
+	$Datosuser9Bar = '';
+
+	if ($total_user10Bar == 0) { 
+		$Datosuser10Bar = '<div class="sinDatos"></div><canvas id="chart-Statususer10Bar" width="0" height="0"/>';
+	}
+	else {
+		$Datosuser10Bar = '<canvas id="chart-Statususer10Bar" width="80" height="80"/>';
+	}
+	$Datosuser10Bar = '';
+?>
+
+<style>
+	body {
+		background-color: #aaa;
+	}
+	div.sinDatos {
+		background-color:#EEE;
+		border-radius:120px;
+		width:120px;
+		height:120px;
+		border:1px solid black;
+	}
+</style>
+<form action="<?= $url ?>" method="post" id="filtrarporfecha2">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div style="height:8px; width:100%;"></div>
+    
+<div class="row">
+	<div class="col-lg-1 col-md-1 col-sm-1">
+		<a href="consultas.php" style="text-decoration:none;">
+			<h4 class="modal-title" style="color:white; margin:5px 0px 0px 10px;">
+				<button type="button" class="btn btn-danger btn-md" style="margin-top:-5px;">
+  					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Regresar
+				</button>
+			</h4>
+		</a>
+	</div>
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<h4 class="modal-title" id="myModalLabel" style="color:white; margin:5px 0px 0px 10px;">
+			<span class="glyphicon glyphicon-credit-card"></span> 
+			Equipo S.
+		</h4>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<div class="row" >
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Desde:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+					<div class="input-group input-group-md vista" id="campoparafecha">
+						<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde2" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+					</div>
+			</div>
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Hasta:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta2" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha2').submit();" style="margin:auto; margin-right:50px; text-align:left;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+  	</div>
+</div>
+<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">
+</form>
+
+	
+</nav>
+
+  <div class="row" style="margin-top:-5px;">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+
+			$tmp_Usuario = 'ventasequipo2';
+			$tmp_Nombre = 'Alberto Fernandez';
+			$tmp_Telefono = 'Ext. ';
+			$tmp_Correo = 'ventasequipo1@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user1;
+			$tmp_semaforo_Total = $asignacionesTotal_user1;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user1;
+
+			$tmp_Grafica = $Datosuser1;
+			$tmp_Grafica_Facturados = $total_facturados_user1;
+			$tmp_Grafica_Correos = $total_correos_user1;
+			$tmp_Grafica_Llamadas = $total_llamadas_user1;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user1;
+			$tmp_Grafica_Descartados = $total_descartados_user1;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user1;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user1;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user1;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user1;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user1;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user1;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user1;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user1;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user1;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user1;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	
+
+
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'ventasequipo3';
+			$tmp_Nombre = 'ventasequipo3';
+			$tmp_Telefono = 'Ext. 1171';
+			$tmp_Correo = 'ventasequipo3@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user2;
+			$tmp_semaforo_Total = $asignacionesTotal_user2;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user2;
+
+			$tmp_Grafica = $Datosuser2;
+			$tmp_Grafica_Facturados = $total_facturados_user2;
+			$tmp_Grafica_Correos = $total_correos_user2;
+			$tmp_Grafica_Llamadas = $total_llamadas_user2;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user2;
+			$tmp_Grafica_Descartados = $total_descartados_user2;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user2;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user2;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user2;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user2;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user2;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user2;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user2;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user2;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user2;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user2;
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+
+			$tmp_Usuario = 'ventasequipo4';
+			$tmp_Nombre = 'ventasequipo4';
+			$tmp_Telefono = 'Ext.';
+			$tmp_Correo = 'ventasequipo4@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user3;
+			$tmp_semaforo_Total = $asignacionesTotal_user3;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user3;
+
+			$tmp_Grafica = $Datosuser3;
+			$tmp_Grafica_Facturados = $total_facturados_user3;
+			$tmp_Grafica_Correos = $total_correos_user3;
+			$tmp_Grafica_Llamadas = $total_llamadas_user3;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user3;
+			$tmp_Grafica_Descartados = $total_descartados_user3;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user3;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user3;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user3;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user3;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user3;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user3;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user3;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user3;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user3;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user3;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'ventasequipo5';
+			$tmp_Nombre = 'ventasequipo5';
+			$tmp_Telefono = 'Ext.';
+			$tmp_Correo = 'ventasequipo5@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user4;
+			$tmp_semaforo_Total = $asignacionesTotal_user4;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user4;
+
+			$tmp_Grafica = $Datosuser4;
+			$tmp_Grafica_Facturados = $total_facturados_user4;
+			$tmp_Grafica_Correos = $total_correos_user4;
+			$tmp_Grafica_Llamadas = $total_llamadas_user4;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user4;
+			$tmp_Grafica_Descartados = $total_descartados_user4;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user4;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user4;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user4;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user4;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user4;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user4;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user4;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user4;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user4;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user4;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'ventasequipo6';
+			$tmp_Nombre = 'ventasequipo6';
+			$tmp_Telefono = 'Ext. 1166';
+			$tmp_Correo = 'ventasequipo6@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user5;
+			$tmp_semaforo_Total = $asignacionesTotal_user5;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user5;
+
+			$tmp_Grafica = $Datosuser5;
+			$tmp_Grafica_Facturados = $total_facturados_user5;
+			$tmp_Grafica_Correos = $total_correos_user5;
+			$tmp_Grafica_Llamadas = $total_llamadas_user5;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user5;
+			$tmp_Grafica_Descartados = $total_descartados_user5;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user5;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user5;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user5;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user5;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user5;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user5;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user5;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user5;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user5;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user5;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'ventasequipo7';
+			$tmp_Nombre = 'ventasequipo7';
+			$tmp_Telefono = 'Ext.';
+			$tmp_Correo = 'ventasequipo7@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user6;
+			$tmp_semaforo_Total = $asignacionesTotal_user6;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user6;
+
+			$tmp_Grafica = $Datosuser6;
+			$tmp_Grafica_Facturados = $total_facturados_user6;
+			$tmp_Grafica_Correos = $total_correos_user6;
+			$tmp_Grafica_Llamadas = $total_llamadas_user6;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user6;
+			$tmp_Grafica_Descartados = $total_descartados_user6;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user6;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user6;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user6;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user6;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user6;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user6;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user6;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user6;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user6;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user6;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+
+			$tmp_Usuario = 'ventasequipo1';
+			$tmp_Nombre = 'ventasequipo1';
+			$tmp_Telefono = 'Ext. ';
+			$tmp_Correo = 'ventasequipo1@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user7;
+			$tmp_semaforo_Total = $asignacionesTotal_user7;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user7;
+
+			$tmp_Grafica = $Datosuser7;
+			$tmp_Grafica_Facturados = $total_facturados_user7;
+			$tmp_Grafica_Correos = $total_correos_user7;
+			$tmp_Grafica_Llamadas = $total_llamadas_user7;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user7;
+			$tmp_Grafica_Descartados = $total_descartados_user7;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user7;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user7;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user7;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user7;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user7;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user7;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user7;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user7;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user7;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user7;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'user8';
+			$tmp_Nombre = 'user8';
+			$tmp_Telefono = '';
+			$tmp_Correo = 'telemarketing05@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user8;
+			$tmp_semaforo_Total = $asignacionesTotal_user8;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user8;
+
+			$tmp_Grafica = $Datosuser8;
+			$tmp_Grafica_Facturados = $total_facturados_user8;
+			$tmp_Grafica_Correos = $total_correos_user8;
+			$tmp_Grafica_Llamadas = $total_llamadas_user8;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user8;
+			$tmp_Grafica_Descartados = $total_descartados_user8;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user8;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user8;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user8;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user8;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user8;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user8;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user8;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user8;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user8;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user8;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'user9';
+			$tmp_Nombre = 'user9';
+			$tmp_Telefono = '';
+			$tmp_Correo = 'user9@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user9;
+			$tmp_semaforo_Total = $asignacionesTotal_user9;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user9;
+
+			$tmp_Grafica = $Datosuser9;
+			$tmp_Grafica_Facturados = $total_facturados_user9;
+			$tmp_Grafica_Correos = $total_correos_user9;
+			$tmp_Grafica_Llamadas = $total_llamadas_user9;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user9;
+			$tmp_Grafica_Descartados = $total_descartados_user9;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user9;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user9;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user9;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user9;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user9;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user9;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user9;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user9;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user9;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user9;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<?php
+			$tmp_Usuario = 'user10';
+			$tmp_Nombre = 'user10';
+			$tmp_Telefono = 'Ext. 1150';
+			$tmp_Correo = 'ventascat06@avanceytec.com.mx';
+
+			$tmp_semaforo_Hoy =  $asignacionesHoy_user10;
+			$tmp_semaforo_Total = $asignacionesTotal_user10;
+			$tmp_semaforo_Atrasados = $asignacionesAtrasados_user10;
+
+			$tmp_Grafica = $Datosuser10;
+			$tmp_Grafica_Facturados = $total_facturados_user10;
+			$tmp_Grafica_Correos = $total_correos_user10;
+			$tmp_Grafica_Llamadas = $total_llamadas_user10;
+			$tmp_Grafica_Llamadasycorreos = $total_llamadasycorreos_user10;
+			$tmp_Grafica_Descartados = $total_descartados_user10;
+
+			$tmp_contactoMedio_01 = $contactoMedio_01_user10;
+			$tmp_contactoMedio_02 = $contactoMedio_02_user10;
+			$tmp_contactoMedio_03 = $contactoMedio_03_user10;
+			$tmp_contactoMedio_04 = $contactoMedio_04_user10;
+			$tmp_contactoMedio_05 = $contactoMedio_05_user10;
+			$tmp_contactoMedio_06 = $contactoMedio_06_user10;
+			$tmp_contactoMedio_07 = $contactoMedio_07_user10;
+			$tmp_contactoMedio_08 = $contactoMedio_08_user10;
+			$tmp_contactoMedio_09 = $contactoMedio_09_user10;
+			$tmp_contactoMedio_10 = $contactoMedio_10_user10;
+
+			include('v.consultas-graficas-if.02-01.phtml');
+		?>
+	</div>
+</div>

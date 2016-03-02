@@ -1,0 +1,41 @@
+<table class="table table-condensed " style="width:100%; background-color:white;">
+	<tr>
+		<td width="30%" style="vertical-align:middle;">
+			<div style="width:120px; height120px; margin:auto;">
+				<canvas id="chart-StatusPlayeras" width="120" height="120"/>
+			</div>
+		</td>
+		<td width="70%">
+			<?php
+				$a = $consultas_numero_asignacionesHoy + $consultas_numero_pendientes;
+				$b = $consultas_numero_asignacionesTotal - $a;
+			?>
+			<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+				<tr>
+					<th class=""><span class="label label-success"><?= $total_facturados_campochihuahua1 ?></span></th><td>Facturado</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-warning"><?= $total_correos_campochihuahua1 ?></span></th><td>Correo</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-info"><?= $total_llamadas_campochihuahua1 ?></span></th><td>Llamada</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_campochihuahua1 ?></span></th><td>Correo y Llamada</td>
+				</tr>
+				<tr>
+					<th style="width:5%;"><span class="label label-default"><?= $total_descartados_campochihuahua1 ?></span></th><td style="width:95%;">Descartado</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:center;">
+			<!--
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg3">Detalles</button>
+			-->
+		</td>
+	</tr>
+</table>
+<div style="height:12px;">
+</div>

@@ -1,0 +1,474 @@
+<?php
+
+if ($filterDate1 == '--') { $filterDate1 = ''; } else { }
+if ($filterDate2 == '--') { $filterDate2 = ''; } else { }
+
+?>
+
+<?php
+
+$total_admsoporte = $total_facturados_admsoporte + $total_correos_admsoporte + $total_llamadas_admsoporte + $total_llamadasycorreos_admsoporte + $total_descartados_admsoporte;
+$total_equipomerida = $total_facturados_equipomerida + $total_correos_equipomerida + $total_llamadas_equipomerida + $total_llamadasycorreos_equipomerida + $total_descartados_equipomerida;
+$total_equiposguadalajara = $total_facturados_equiposguadalajara + $total_correos_equiposguadalajara + $total_llamadas_equiposguadalajara + $total_llamadasycorreos_equiposguadalajara + $total_descartados_equiposguadalajara;
+$total_equiposmonterrey = $total_facturados_equiposmonterrey + $total_correos_equiposmonterrey + $total_llamadas_equiposmonterrey + $total_llamadasycorreos_equiposmonterrey + $total_descartados_equiposmonterrey;
+$total_ventasequipo1 = $total_facturados_ventasequipo1 + $total_correos_ventasequipo1 + $total_llamadas_ventasequipo1 + $total_llamadasycorreos_ventasequipo1 + $total_descartados_ventasequipo1;
+$total_ventasequipo2 = $total_facturados_ventasequipo2 + $total_correos_ventasequipo2 + $total_llamadas_ventasequipo2 + $total_llamadasycorreos_ventasequipo2 + $total_descartados_ventasequipo2;
+$total_ventasequipo3 = $total_facturados_ventasequipo3 + $total_correos_ventasequipo3 + $total_llamadas_ventasequipo3 + $total_llamadasycorreos_ventasequipo3 + $total_descartados_ventasequipo3;
+$total_ventasequipo4 = $total_facturados_ventasequipo4 + $total_correos_ventasequipo4 + $total_llamadas_ventasequipo4 + $total_llamadasycorreos_ventasequipo4 + $total_descartados_ventasequipo4;
+$total_ventasequipo5 = $total_facturados_ventasequipo5 + $total_correos_ventasequipo5 + $total_llamadas_ventasequipo5 + $total_llamadasycorreos_ventasequipo5 + $total_descartados_ventasequipo5;
+$total_ventasequipo6 = $total_facturados_ventasequipo6 + $total_correos_ventasequipo6 + $total_llamadas_ventasequipo6 + $total_llamadasycorreos_ventasequipo6 + $total_descartados_ventasequipo6;
+$total_ventasequipo7 = $total_facturados_ventasequipo7 + $total_correos_ventasequipo7 + $total_llamadas_ventasequipo7 + $total_llamadasycorreos_ventasequipo7 + $total_descartados_ventasequipo7;
+
+	if ($total_admsoporte == 0) { 
+		$DatosAdmsoporte = '<div class="sinDatos"></div><canvas id="chart-StatusAdmsoporte" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_equipomerida == 0) { 
+		$DatosEquipomerida = '<div class="sinDatos"></div><canvas id="chart-StatusEquipomerida" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_equiposguadalajara == 0) { 
+		$DatosEquiposguadalajara = '<div class="sinDatos"></div><canvas id="chart-StatusEquiposguadalajara" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_equiposmonterrey == 0) { 
+		$DatosEquiposmonterrey = '<div class="sinDatos"></div><canvas id="chart-StatusEquiposmonterrey" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo1 == 0) { 
+		$DatosVentasequipo1 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo1" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo2 == 0) { 
+		$DatosVentasequipo2 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo2" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo3 == 0) { 
+		$DatosVentasequipo3 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo3" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo4 == 0) { 
+		$DatosVentasequipo4 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo4" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo5 == 0) { 
+		$DatosVentasequipo5 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo5" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo6 == 0) { 
+		$DatosVentasequipo6 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo6" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+	if ($total_ventasequipo7 == 0) { 
+		$DatosVentasequipo7 = '<div class="sinDatos"></div><canvas id="chart-StatusVentasequipo7" width="0" height="0"/>';
+	}
+	else {
+		$DatosGaguirre = '<canvas id="chart-StatusGaguirre" width="120" height="120"/>';
+	}
+
+?>
+
+<style>
+	body {
+		background-color: White;
+	}
+	div.sinDatos {
+		background-color:#EEE;
+		border-radius:120px;
+		width:120px;
+		height:120px;
+		border:1px solid black;
+	}
+</style>
+<form action="<?= $url ?>" method="post" id="filtrarporfecha2">
+<div class="row" style="margin:-90px 0 20px 0;">
+	<div class="col-lg-7 col-md-7 col-sm-7" style=""></div>
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<div class="row" >
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1"></div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Desde:</strong>
+					<div class="input-group input-group-md vista" id="campoparafecha">
+						<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde2" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+					</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Hasta:</strong>
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta2" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+				<br>
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha2').submit();" style="margin:auto; margin-right:50px; text-align:left;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+  	</div>
+</div>
+<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">
+</form>
+
+  <div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Admsoporte</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosAdmsoporte ?>
+					</div>
+					<a href="history?vendedor=admsoporte" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_admsoporte ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_admsoporte ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_admsoporte ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_admsoporte ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_admsoporte ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Equipomerida</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosEquipomerida ?>
+					</div>
+					<a href="history?vendedor=equipomerida" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_equipomerida ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_equipomerida ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_equipomerida ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_equipomerida ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Equipomerida ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Equiposguadalajara</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosEquiposguadalajara ?>
+					</div>
+					<a href="history?vendedor=equiposguadalajara" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_equiposguadalajara ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_equiposguadalajara ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_equiposguadalajara ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_equiposguadalajara ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Equiposguadalajara ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Equiposmonterrey</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosEquiposmonterrey ?>
+					</div>
+					<a href="history?vendedor=equiposmonterrey" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_equiposmonterrey ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_equiposmonterrey ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_equiposmonterrey ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_equiposmonterrey ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Equiposmonterrey ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo1</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo1 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo1" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo1 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo1 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo1 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo1 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo1 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo2</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo2 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo2" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo2 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo2 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo2 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo2 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo2 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo3</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo3 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo3" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo3 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo3 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo3 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo3 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo3 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo4</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo4 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo4" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo4 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo4 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo4 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo4 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo4 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo5</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo5 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo5" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo5 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo5 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo5 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo5 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo5 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ventasequipo6</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosVentasequipo6 ?>
+					</div>
+					<a href="history?vendedor=ventasequipo6" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ventasequipo6 ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ventasequipo6 ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ventasequipo6 ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ventasequipo6 ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_Ventasequipo6 ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+	</div>
+</div>

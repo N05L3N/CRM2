@@ -1,0 +1,13 @@
+#pagination li {
+	display: inline-block;
+	border: solid #dddddd 1px;
+	margin: 2px;
+}
+
+#pagination li:hover {
+	cursor: pointer;
+}
+
+body {
+	background-color: #111;
+}

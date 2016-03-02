@@ -1,0 +1,97 @@
+<table class="table table-condensed " style="width:100%; background-color:white;">
+	<tr>
+		<td width="40%" style="vertical-align:middle;">
+			<div style="width:125px; height125px; margin:auto;">
+				<canvas id="chart-StatusTelemarketing" width="125" height="125"/>
+			</div>
+
+<!--
+
+<div class="btn-group">
+	<button type="button" class="btn btn-info btn-xs">Hoy <?= $consultasConsumibles_numero_asignacionesHoy ?></button>
+	<button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">Angelica <?= $consultasConsumibles_numero_asignacionesHoy ?></a></li>
+		<li><a href="#">Lcera 0</a></li>
+		<li><a href="#">Lesparza 0</a></li>
+		<li><a href="#">Rubi 0</a></li>
+		<li><a href="#">Mario 0</a></li>
+		<li><a href="#">baragon 0</a></li>
+		<li><a href="#">Gabriela 0</a></li>
+		<li><a href="#">Ventascat05 0</a></li>
+		<li><a href="#">Ventascat13 0</a></li>
+		<li><a href="#">Leticia 0</a></li>		
+	</ul>
+</div>
+<div class="btn-group">
+	<button type="button" class="btn btn-danger btn-xs">Atrasados <?= $consultasConsumibles_numero_pendientes ?></button>
+	<button type="button" class="btn btn-danger dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+	</ul>
+</div>
+<div class="btn-group">
+	<button type="button" class="btn btn-primary btn-xs">Realizadas <?= $b ?></button>
+	<button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+	</ul>
+</div>
+<div class="btn-group">
+	<button type="button" style="background-color:black;" class="btn btn-xs">Total <?= $consultasConsumibles_numero_asignacionesTotal ?></button>
+	<button type="button" style="background-color:black;" class="btn dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+	</ul>
+</div>
+
+		<div class="btn-toolbar" role="toolbar" aria-label="">
+			<div class="btn-group" role="group" aria-label=""><span class="label label-info"><?= $consultasConsumibles_numero_asignacionesHoy ?></span></div>
+			<div class="btn-group" role="group" aria-label=""><span class="label label-danger"><?= $consultasConsumibles_numero_pendientes ?></span></div>
+			<div class="btn-group" role="group" aria-label=""><span class="label label-primary"><?= $b ?></span></div>
+			<div class="btn-group" role="group" aria-label=""><span class="label" style="background-color:black;"><?= $consultasConsumibles_numero_asignacionesTotal ?></span></div>
+		</div>
+-->
+		</td>
+		<td width="60%">
+			<?php
+				$a = $consultas_numero_asignacionesHoy + $consultas_numero_pendientes;
+				$b = $consultas_numero_asignacionesTotal - $a;
+			?>
+			<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; margin-bottom:0;">
+				<tr>
+					<th class=""><span class="label label-success"><?= $total_facturadosT ?></span></th><td>Facturado</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-warning"><?= $total_correosT ?></span></th><td>Correo</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-info"><?= $total_llamadasT ?></span></th><td>Llamada</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-primary"><?= $total_llamadasycorreosT ?></span></th><td>Correo y Llamada</td>
+				</tr>
+				<tr>
+					<th style="width:5%;"><span class="label label-default"><?= $total_descartadosT ?></span></th><td style="width:95%;">Descartado</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:center;">
+			<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2">Detalles</button>-->
+			<a href="if.consultas?iframe=02">
+				<button type="button" class="btn btn-primary">Detalles</button>
+			</a>
+		</td>
+	</tr>
+</table>

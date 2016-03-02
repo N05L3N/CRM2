@@ -1,0 +1,33 @@
+<h5>Equipo: Asignaciones</h5>
+<table class="table table-striped table-bordered" width="100%">
+	<tr>
+		<td width="30%" style="vertical-align:middle;">
+			<div style="width:120px; height120px; margin:auto;">
+				<!--
+				-->
+				<canvas id="chart-areaEquipo" width="120" height="120" />
+			
+			</div>
+		</td>
+		<td width="70%">
+			<?php
+				$a = $consultasEquipo_numero_asignacionesHoy + $consultasEquipo_numero_pendientes;
+				$b = $consultasEquipo_numero_asignacionesTotal - $a;
+			?>
+			<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+				<tr>
+					<th style="width:5%;"><span class="label label-info"><?= $consultasEquipo_numero_asignacionesHoy ?></span></th><td style="width:95%;">Para Hoy</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-danger"><?= $consultasEquipo_numero_pendientes ?></span></th><td>Atrasadas</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label label-primary"><?= $b ?></span></th><td>Realizadas</td>
+				</tr>
+				<tr>
+					<th class=""><span class="label" style="background-color:black;"><?= $consultasEquipo_numero_asignacionesTotal ?></span></th><td>Total</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,59 @@
+<?php
+
+include('controller/databases.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+<title></title>
+<script type="text/javascript"> setInterval(function() { var myelement = document.getElementById('myimg'); myelement.src = 'image.jpg?rand=' + Math.random(); }, 100000); </script>
+
+
+<?php
+	if ($_GET['theme' == 'b']) {
+?>
+<!-- Bootstrap core CSS -->
+<link href="css/pagination.css" rel="stylesheet">
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<link href="dist/css/bootstrap-theme.css" rel="stylesheet">
+<link href="signin.css" rel="stylesheet">
+<link href="theme.css" rel="stylesheet">
+<script type="text/javascript" src="inc/jquery.min.js"></script>
+<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<?php		
+	}
+	else {
+?>
+
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="assets/plugins/jquery-ui-1.10.4/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+<link href="assets/plugins/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+<link href="assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="assets/css/animate.min.css" rel="stylesheet" />
+<link href="assets/css/style.min.css" rel="stylesheet" />
+<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+
+<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+<link href="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
+<link href="assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+<link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+<link href="assets/plugins/morris/morris.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- <div id="page-loader" class="fade in"><span class="spinner"></span></div> -->
+<?php
+	}
+?>
+<img src="image.jpg" width="1" height="1" id="myimg" />

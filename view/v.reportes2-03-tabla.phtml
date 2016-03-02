@@ -1,0 +1,121 @@
+<table class="table table-bordered">
+	<tr>
+		<th style="background-color:White;">Id_seguimiento</th>
+		<th style="background-color:White;">Usuario</th>
+		<th style="background-color:White;">Estadodeventa</th>
+		<th style="background-color:White; width:200px;">Comentariovendedor</th>
+		<th style="background-color:White;">Fechaasignacion</th>
+		<th style="background-color:White;">Fechaproxima</th>
+	</tr>
+	
+	<?php 
+
+		if ($_SESSION['filtro_xls_order'] != '') {
+			$filtro_xls_order = $_SESSION['filtro_xls_order'];
+		}
+		
+		else {
+			$filtro_xls_order = 'ASC';
+		}
+
+		if ($fecha_inicio_filtro == '--') {
+
+			$result = mysql_query("SELECT * FROM ecrm_comentarios_v  ORDER BY id_comentarios_v $filtro_xls_order limit 0,9999");
+
+		}
+
+		else {
+
+			$result = mysql_query("SELECT * FROM ecrm_comentarios_v WHERE fechaproxima >= '$fecha_inicio_filtro' AND fechaproxima <= '$fecha_fin_filtro' ORDER BY id_comentarios_v $filtro_xls_order limit 0,9999");
+
+		}
+
+		$i = 0;  
+  		while ($row = mysql_fetch_array($result)) {
+    	
+    			if ($i > 0) {}
+
+    			$id_app_reclamaciones = $row['id_app_reclamaciones'];
+    			$numero_cliente = $row['numero_cliente'];
+    			$cliente = $row['cliente'];
+
+
+    			###
+				$id_comentarios_v = $row['id_comentarios_v'];
+				$id_seguimiento = $row['id_seguimiento'];
+				$usuario = $row['usuario'];
+				$termometro = $row['termometro'];
+				$estadodeventa = $row['estadodeventa'];
+				$comentariovendedor = $row['comentariovendedor'];
+				$factura = $row['factura'];
+				$fechaasignacion = $row['fechaasignacion'];
+				$horaasignacion = $row['horaasignacion'];
+				$fecharespuesta = $row['fecharespuesta'];
+				$horarespuesta = $row['horarespuesta'];
+				$fechaproxima = $row['fechaproxima'];
+    			###
+    			
+    			$fechaE = explode("-", $row['fecha']);
+    			$rowfecha = $row['fecha'];
+    			$fecha = ''.$fechaE[2].'-'.$fechaE[1].'-'.$fechaE[0].'';
+
+    			# Agregar un mes a la fecha de registro Opcion 1
+    				$fecha1mesmas = $rowfecha;
+				$fecha1mesmas = explode("-", $fecha1mesmas); 
+				$fecha_cambiada = mktime(0,0,0, $fecha1mesmas[1]+1, $fecha1mesmas[2]+0, $fecha1mesmas[0]+0); 
+				$fecha1mesmasMX = date("d-m-Y", $fecha_cambiada);
+
+			# Agregar un mes a la fecha de registro Opcion 2
+				$fecha30diasmasUS = date('Y-m-d', strtotime($rowfecha.' 30 day'));
+				$fecha30diasmasUSE = explode("-", $fecha30diasmasUS);
+				$fecha30diasmasMX = ''.$fecha30diasmasUSE[2].'-'.$fecha30diasmasUSE[1].'-'.$fecha30diasmasUSE[0].'';
+				$digitos30diasmasUS = ''.$fecha30diasmasUSE[0].''.$fecha30diasmasUSE[1].''.$fecha30diasmasUSE[2].'';
+
+			# Fechas
+				$fechadehoyUS = date('Y-m-d');
+				$fechadehoyMX = date('d-m-Y');
+				$digitosdehoyUS = date('Ymd');
+				$digitosdehoyMX = date('dmY');
+
+    			$fecha_resueltaE = explode("-", $row['fecha_resuelta']);
+    			$fecha_resuelta = ''.$fecha_resueltaE[2].'-'.$fecha_resueltaE[1].'-'.$fecha_resueltaE[0].'';
+
+    			$statusproveedor = $row['statusproveedor'];
+
+    			if ($statusproveedor == 'Aceptado') {
+    				echo '<tr class="success">';
+    			}
+
+    			else if ($statusproveedor == 'Rechazado') {
+    				echo '<tr class="danger">';
+    			}
+
+    			else if ($statusproveedor == 'En Proceso') {
+    				echo '<tr class="warning">';
+    			}
+
+    			else if ($statusproveedor == 'Cancelado') {
+    				echo '<tr class="active">';
+    			}		
+
+			else if ($statusproveedor == 'Detenido') {
+    				echo '<tr class="info">';
+    			}		
+
+    			else {
+    				echo '<tr>';
+    			}
+	?>
+
+<td style="background-color:White;"><?= $id_seguimiento ?></td>
+<td style="background-color:White;"><?= $usuario ?></td>
+<td style="background-color:White;"><?= $estadodeventa ?></td>
+<td style="background-color:White;"><?= $comentariovendedor ?></td>
+<td style="background-color:White;"><?= $fechaasignacion ?></td>
+<td style="background-color:White;"><?= $fechaproxima ?></td>
+			</tr>
+    	<?php
+    			$i++;
+		}
+	?>
+</table>

@@ -1,0 +1,279 @@
+<?php
+
+/* Forzar Usuario */
+
+if ($_GET['usuarioF'] == 'coordinadorventas1') {
+
+	$usuario = 'coordinadorventas1';
+	$nombreAdministrador = 'Cesar Alcantar';
+
+}
+
+else if ($_GET['usuarioF'] == 'coordinadorventas2') {
+
+	$usuario = 'coordinadorventas2';
+	$nombreAdministrador = 'Liz Marquez';
+
+}
+
+else {
+
+	$nombreAdministrador = 'Gabriela Aguirre';
+
+}
+
+
+
+/* Forzar Usuario */
+
+if ($filterDate1 == '--') { $filterDate1 = ''; } else { }
+if ($filterDate2 == '--') { $filterDate2 = ''; } else { }
+
+if ($dev == '') {
+	$coment1 = '';
+	$coment2 = '';
+}
+
+else {
+	$coment1 = '<!--';
+	$coment2 = '-->';
+}
+
+
+#################
+
+	if ($usuario == 'coordinadorventas1') {
+
+		$total_1 = $total_facturados_1 + $total_correos_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;		
+		$total_2 = $total_facturados_2 + $total_correos_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3 = $total_facturados_3 + $total_correos_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4 = $total_facturados_4 + $total_correos_4 + $total_llamadas_4 + $total_llamadasycorreos_4 + $total_descartados_4;
+		$total_5 = $total_facturados_5 + $total_correos_5 + $total_llamadas_5 + $total_llamadasycorreos_5 + $total_descartados_5;
+		$total_6 = $total_facturados_6 + $total_correos_6 + $total_llamadas_6 + $total_llamadasycorreos_6 + $total_descartados_6;
+		$total_7 = $total_facturados_7 + $total_correos_7 + $total_llamadas_7 + $total_llamadasycorreos_7 + $total_descartados_7;
+
+		$total_1Bar = $asignacionesHoy_1 + $asignacionesTotal_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;
+		$total_2Bar = $asignacionesHoy_2 + $asignacionesTotal_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3Bar = $asignacionesHoy_3 + $asignacionesTotal_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4Bar = $asignacionesHoy_5 + $asignacionesTotal_5 + $asignacionesAtrasados_5;
+		$total_5Bar = $asignacionesHoy_5 + $asignacionesTotal_5 + $total_llamadas_5 + $total_llamadasycorreos_5 + $total_descartados_5;
+		$total_6Bar = $asignacionesHoy_6 + $asignacionesTotal_6 + $total_llamadas_6 + $total_llamadasycorreos_6 + $total_descartados_6;
+		$total_7Bar = $asignacionesHoy_7 + $asignacionesTotal_7 + $total_llamadas_7 + $total_llamadasycorreos_7 + $total_descartados_7;
+
+	}
+
+	else if ($usuario == 'coordinadorventas2') {
+		$total_1 = $total_facturados_1 + $total_correos_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;
+		$total_2 = $total_facturados_2 + $total_correos_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3 = $total_facturados_3 + $total_correos_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4 = $total_facturados_4 + $total_correos_4 + $total_llamadas_4 + $total_llamadasycorreos_4 + $total_descartados_4;
+		$total_5 = $total_facturados_5 + $total_correos_5 + $total_llamadas_5 + $total_llamadasycorreos_5 + $total_descartados_5;
+		
+		$total_1Bar = $asignacionesHoy_1 + $asignacionesTotal_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;
+		$total_2Bar = $asignacionesHoy_2 + $asignacionesTotal_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3Bar = $asignacionesHoy_3 + $asignacionesTotal_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4Bar = $asignacionesHoy_4 + $asignacionesTotal_4 + $total_llamadas_4 + $total_llamadasycorreos_4 + $total_descartados_4;
+		$total_5Bar = $asignacionesHoy_5 + $asignacionesTotal_5 + $total_llamadas_5 + $total_llamadasycorreos_5 + $total_descartados_5;
+	}
+
+	else {
+		$total_1 = $total_facturados_1 + $total_correos_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;
+		$total_2 = $total_facturados_2 + $total_correos_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3 = $total_facturados_3 + $total_correos_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4 = $total_facturados_4 + $total_correos_4 + $total_llamadas_4 + $total_llamadasycorreos_4 + $total_descartados_4;
+
+		$total_1Bar = $asignacionesHoy_1 + $asignacionesTotal_1 + $total_llamadas_1 + $total_llamadasycorreos_1 + $total_descartados_1;
+		$total_2Bar = $asignacionesHoy_2 + $asignacionesTotal_2 + $total_llamadas_2 + $total_llamadasycorreos_2 + $total_descartados_2;
+		$total_3Bar = $asignacionesHoy_3 + $asignacionesTotal_3 + $total_llamadas_3 + $total_llamadasycorreos_3 + $total_descartados_3;
+		$total_4Bar = $asignacionesHoy_4 + $asignacionesTotal_4 + $total_llamadas_4 + $total_llamadasycorreos_4 + $total_descartados_4;
+	}
+
+
+		if ($total_1 == 0) { 
+			$Datos1 = '<div class="sinDatos"></div><canvas id="chart-Status1" width="0" height="0"/>';
+		}
+		else {
+			$Datos1 = '<canvas id="chart-Status1" width="120" height="120"/>';
+		}
+
+		if ($total_2 == 0) { 
+			$Datos2 = '<div class="sinDatos"></div><canvas id="chart-Status2" width="0" height="0"/>';
+		}
+		else {
+			$Datos2 = '<canvas id="chart-Status2" width="120" height="120"/>';
+		}
+		if ($total_3 == 0) { 
+		$Datos3 = '<div class="sinDatos"></div><canvas id="chart-Status3" width="0" height="0"/>';
+		}
+		else {
+			$Datos3 = '<canvas id="chart-Status3" width="120" height="120"/>';
+		}
+		if ($total_4 == 0) { 
+			$Datos4 = '<div class="sinDatos"></div><canvas id="chart-Status4" width="0" height="0"/>';
+		}
+		else {
+			$Datos4 = '<canvas id="chart-Status4" width="120" height="120"/>';
+		}
+		if ($total_5 == 0) { 
+			$Datos5 = '<div class="sinDatos"></div><canvas id="chart-Status5" width="0" height="0"/>';
+		}
+		else {
+			$Datos5 = '<canvas id="chart-Status5" width="120" height="120"/>';
+		}
+		if ($total_6 == 0) { 
+			$Datos6 = '<div class="sinDatos"></div><canvas id="chart-Status6" width="0" height="0"/>';
+		}
+		else {
+			$Datos6 = '<canvas id="chart-Status6" width="120" height="120"/>';
+		}
+		if ($total_7 == 0) { 
+			$Datos7 = '<div class="sinDatos"></div><canvas id="chart-Status7" width="0" height="0"/>';
+		}
+		else {
+			$Datos7 = '<canvas id="chart-Status7" width="120" height="120"/>';
+		}
+
+		# BAR
+	
+		if ($total_1Bar == 0) { 
+			$Datos1Bar = '<div class="sinDatos"></div><canvas id="chart-Status1Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos1Bar = '<canvas id="chart-Status1Bar" width="80" height="80"/>';
+		}
+		$Datos1Bar = '';
+		if ($total_2Bar == 0) { 
+			$Datos2Bar = '<div class="sinDatos"></div><canvas id="chart-Status2Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos2Bar = '<canvas id="chart-Status2Bar" width="80" height="80"/>';
+		}
+		$Datos2Bar = '';
+		if ($total_3Bar == 0) { 
+			$Datos3Bar = '<div class="sinDatos"></div><canvas id="chart-Status3Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos3Bar = '<canvas id="chart-Status3Bar" width="80" height="80"/>';
+		}
+		$Datos3Bar = '';
+		if ($total_4Bar == 0) { 
+			$Datos4Bar = '<div class="sinDatos"></div><canvas id="chart-Status4Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos4Bar = '<canvas id="chart-Status4Bar" width="80" height="80"/>';
+		}
+		$Datos4Bar = '';
+		if ($total_5Bar == 0) { 
+			$Datos5Bar = '<div class="sinDatos"></div><canvas id="chart-Status5Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos5Bar = '<canvas id="chart-Status5Bar" width="80" height="80"/>';
+		}
+		$Datos5Bar = '';
+		if ($total_6Bar == 0) { 
+			$Datos6Bar = '<div class="sinDatos"></div><canvas id="chart-Status6Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos6Bar = '<canvas id="chart-Status6Bar" width="80" height="80"/>';
+		}
+		$Datos6Bar = '';
+		
+		if ($total_7Bar == 0) { 
+			$Datos7Bar = '<div class="sinDatos"></div><canvas id="chart-Status7Bar" width="0" height="0"/>';
+		}
+		else {
+			$Datos7Bar = '<canvas id="chart-Status7Bar" width="80" height="80"/>';
+		}
+		$Datos7Bar = '';
+
+
+?>
+
+<style>
+	body {
+		background-color: #aaa;
+	}
+	div.sinDatos {
+		background-color:#EEE;
+		border-radius:120px;
+		width:120px;
+		height:120px;
+		border:1px solid black;
+	}
+</style>
+<form action="<?= $url ?>" method="post" id="filtrarporfecha2">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div style="height:8px; width:100%;"></div>
+    
+<div class="row">
+	<div class="col-lg-1 col-md-1 col-sm-1">
+		<a href="consultas.php" style="text-decoration:none;">
+			<h4 class="modal-title" style="color:white; margin:5px 0px 0px 10px;">
+				<button type="button" class="btn btn-danger btn-md" style="margin-top:-5px;">
+  					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Regresar
+				</button>
+			</h4>
+		</a>
+	</div>
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<h4 class="modal-title" id="myModalLabel" style="color:white; margin:5px 0px 0px 10px;">
+			<span class="glyphicon glyphicon-credit-card"></span> 
+			<?= $nombreAdministrador ?>
+		</h4>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<div class="row" >
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Desde:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+					<div class="input-group input-group-md vista" id="campoparafecha">
+						<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde2" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+					</div>
+			</div>
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
+				<div style="color:white; margin-top:7px; font-weight:bold;">Hasta:</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta2" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha2').submit();" style="margin:auto; margin-right:50px; text-align:left;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+  	</div>
+</div>
+<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">
+</form>	
+
+</nav>
+
+
+<?php
+
+	if ($usuario == 'coordinadorventas1') {
+
+		include('v.consultas-graficas-if.04-01.phtml');
+
+	}
+
+
+	else if ($usuario == 'coordinadorventas2') {
+
+		include('v.consultas-graficas-if.04-02.phtml');
+	
+	}
+
+	else {
+
+		include('v.consultas-graficas-if.04-00.phtml');
+
+	}
+
+?>

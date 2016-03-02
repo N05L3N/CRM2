@@ -1,0 +1,111 @@
+<div style="border: 1px solid #999999; border-radius:10px; background:#fff; padding:2px; width:101%;">
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6">
+		<h4 style="margin:0 0 0 10px;">
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<?= $tmp_Nombre ?>
+		</h4>
+		<h4 style="margin:0 0 0 10px;">
+			<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			<?= $tmp_Telefono ?>
+		</h4>
+		<h5 style="margin:0 0 0 10px;">
+			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			<?= $tmp_Correo ?>
+		</h5>
+		
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6" style="text-align:center;">
+		<h4 style="margin:10px;">
+			<span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+			Asignaciones
+		</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar-info" style="width: 33%">
+				<span class="sr-only"><?= $asignacionesHoy_angelica ?>% Complete (success)</span>Hoy: <?= $tmp_semaforo_Hoy ?>
+			</div>
+			<div class="progress-bar progress-bar-primary" style="width: 34%">
+				<span class="sr-only"><?= $asignacionesTotal_angelica ?>% Complete (primary)</span>Total: <?= $tmp_semaforo_Total ?>
+			</div>
+			<div class="progress-bar progress-bar-danger danger-bar-striped" style="width: 33%">
+				<span class="sr-only"><?= $asignacionesAtrasados_angelica ?>% Complete (danger)</span>Atrasadas: <?= $tmp_semaforo_Atrasados ?>
+			</div>
+		</div>
+		<br>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<div class="panel panel-primary" style="height:280px;">
+			<div class="panel-heading">Status de Seguimiento</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<br>
+						<div style="width:125px; height125px; margin:auto;">
+							<?= $tmp_Grafica ?>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+							<tr>
+								<th style="width:5%;"><span class="label label-success"> <?= $tmp_Grafica_Facturados ?></span></th><td style="font-size:13px; width:95%;">Facturado</td>
+							</tr>
+							<tr>
+								<th><span class="label label-warning"><?= $tmp_Grafica_Correos ?></span></th><td style="font-size:13px;">Correo</td>
+							</tr>
+							<tr>
+								<th><span class="label label-info"><?= $tmp_Grafica_Llamadas ?></span></th><td style="font-size:13px;">Llamada</td>
+							</tr>
+							<tr>
+								<th><span class="label label-primary"><?= $tmp_Grafica_Llamadasycorreos ?></span></th><td style="font-size:13px;">Correo y Llamada</td>
+							</tr>
+							<tr>
+								<th><span class="label label-default"><?= $tmp_Grafica_Descartados ?></span></th><td style="font-size:13px;">Descartado</td>
+							</tr>
+						</table>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-7 col-md-7 col-sm-7">
+		<div class="panel panel-primary" style="height:280px;">
+			<div class="panel-heading">Tipo de Registro</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+					<tr>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_04 ?></span></th><td style="width:45%; font-size:13px;"> Llamada realizada a cliente prospecto</td>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_05 ?></span></th><td style="width:45%; font-size:13px;"> Llamada realizada a cliente registrado</td>
+					</tr>
+					<tr>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_03 ?></span></th><td style="width:45%; font-size:13px;"> Llamada entrante por cliente registrado</td>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_02 ?></span></th><td style="width:45%; font-size:13px;"> Llamada entrante por cliente prospecto</td>
+					</tr>
+					<tr>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_07 ?></span></th><td style="width:45%; font-size:13px;"> Seguimiento tintas</td>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_08 ?></span></th><td style="width:45%; font-size:13px;"> Seguimiento ventas equipo</td>
+					</tr>
+					<tr>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_01 ?></span></th><td style="width:45%; font-size:13px;"> Facebook</td>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_09 ?></span></th><td style="width:45%; font-size:13px;"> Twitter</td>
+					</tr>
+					<tr>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_10 ?></span></th><td style="width:45%; font-size:13px;"> Youtube</td>
+						<th style="width:5%;"><span class="label" style="background-color:#000;"><?= $tmp_contactoMedio_06 ?></span></th><td style="width:45%; font-size:13px;"> Mercado libre</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<center>
+	<a href="history?vendedor=<?= $tmp_Usuario ?>" style="text-decoration:none; color:black; margin:auto;">
+		<button type="button" class="btn btn-primary btn-md" style="margin-top:0px;">
+			<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora
+		</button>
+	</a>
+</center>
+<br>
+</div>

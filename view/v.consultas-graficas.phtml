@@ -1,0 +1,327 @@
+<?php
+
+	$filtrarporvendedor = $_POST['filtrarporvendedor'];
+
+	$filterDate1E = explode("-", $filterDate1);
+	$filterDate1 = ''. $filterDate1E[2]. '-'. $filterDate1E[1] .'-'. $filterDate1E[0] . '';
+
+	$filterDate2E = explode("-", $filterDate2);
+	$filterDate2 = ''. $filterDate2E[2]. '-'. $filterDate2E[1] .'-'. $filterDate2E[0] . '';
+
+
+	if ($filterDate1 == '--') {
+		$filterDate1 = '';
+	}
+	else {
+	
+	}
+
+	if ($filterDate2 == '--') {
+		$filterDate2 = '';
+	}
+	else {
+
+	}
+
+?>
+
+<form action="<?= $url ?>" method="post" id="filtrarporfecha">
+
+<div class="row" style="background-color:#fff;">
+	<div class="col-md-5 col-lg-5 col-sm-5 col-xs-5">
+		<h3 style="margin-bottom:10px;">Reporte de Seguimientos</h3>
+	</div>
+	<div class="col-md-7 col-lg-7 col-sm-7 col-xs-7">
+		<div class="row">
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				<h5>Filtrar por Fecha</h5>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Desde:</strong>
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+				</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Hasta:</strong>
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				<br>
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha').submit();" style="margin:auto; margin-right:50px;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+	<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">	
+</form>
+
+
+<div class="row" style="margin-top:10px;">
+	<div class="col-md-12" style="background-color:#ddd;">
+
+<?php
+	
+	if ($usuario == 'atptelemarketing') {
+
+?>
+						
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusEquipo" width="0" height="0"/>
+				<?php #include('view/v.consultas-graficas.status-equipo.phtml') ?>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Telemarketing</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-telemarketing.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusCampochihuahua1" width="0" height="0"/>
+				<?php include('view/v.consultas-graficas.status-playeras.phtml') ?>	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusVentascampo" width="0" height="0"/>
+				<?php include('view/v.consultas-graficas.status-ventas-campo.phtml') ?>	
+			</div>
+		</div>
+
+
+<?php
+
+	}
+	
+	else if ($usuario == 'gaguirre') {
+
+?>
+						
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusEquipo" width="0" height="0"/>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<?php include('view/v.consultas-graficas.status-ventascampo-0.phtml') ?>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusCampochihuahua1" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-playeras.phtml') ?>	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusVentascampo" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-ventas-campo.phtml') ?>
+		</div>
+		</div>
+
+<?php
+
+	}
+
+	else if ($usuario == 'coordinadorventas1') {
+
+?>
+						
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusEquipo" width="0" height="0"/>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<?php include('view/v.consultas-graficas.status-ventascampo-1.phtml') ?>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusCampochihuahua1" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-playeras.phtml') ?>	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusVentascampo" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-ventas-campo.phtml') ?>	
+		</div>
+		</div>
+
+<?php
+
+	}
+	
+	else if ($usuario == 'coordinadorventas2') {
+
+?>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<canvas id="chart-StatusEquipo" width="0" height="0"/>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<?php include('view/v.consultas-graficas.status-ventascampo-2.phtml') ?>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusCampochihuahua1" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-playeras.phtml') ?>	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3">
+			<canvas id="chart-StatusVentascampo" width="0" height="0"/>
+			<?php include('view/v.consultas-graficas.status-ventas-campo.phtml') ?>	
+		</div>
+		</div>
+
+<?php
+
+	}
+
+	else {
+
+?>
+
+		<h4>Ventas Consumibles</h4>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Telemarketing</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-telemarketing.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Playeras y Gorras Textiles</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-playeras.phtml') ?>	
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Servicio al Cliente</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.asignaciones-servicio-al-cliente.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			</div>
+		</div>
+
+		<h4>Ventas Campo</h4>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading"><h6>Chihuahua, Juárez, Monterrey, Saltillo</h6></div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-ventascampo-0.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading"><h6>Durango, Culiacan, Obregon, Mexicali, Tijuana, Torreon, Hermosillo</h6></div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-ventascampo-1.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading"><h6>San Luis Potosí, Veracruz, Guadalajara, Queretaro, Puebla, Aguascalientes</h6></div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-ventascampo-2.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			</div>
+		</div>
+
+		<h4>Sucursales</h4>
+
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-9">
+				<div class="panel panel-primary">
+  					<div class="panel-heading"><h6>Sucursales</h6></div>
+  					<div class="panel-body">
+  						<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+  							<tr>
+  								<th>Sucursal</th>
+								<th>Visita <br>con Venta</th>
+								<th>Visita <br>sin Venta</th>
+								<th>Descartado</th>
+								<th></th>
+  							</tr>
+  							<tr>
+  								<th>Estado de México</th>
+								<td><span class="label label-success">0</span></td>
+								<td><span class="label label-warning">0</span></td>
+								<td><span class="label label-default">0</span></td>
+								<td>
+									<a href="if.consultas?iframe=04&usuarioF=coordinadorventas2">
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg4">Detalles</button>
+									</a>
+								</td>
+  							</tr>
+  						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+			</div>
+		</div>
+
+				
+
+
+		<h4>Ventas Equipo y Manualidades</h4>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Equipo</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.status-equipo.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">Manualidades</div>
+  					<div class="panel-body">
+    						<?php include('view/v.consultas-graficas.asignaciones-manualidades.phtml') ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+			</div>
+		</div>
+		
+		<div style="width:10px; height10px; margin:auto;">
+			<canvas id="chart-area2" width="10" height="10"/>
+		</div>
+		<div style="width:10px; height10px; margin:auto;">
+			<canvas id="chart-areaEquipo" width="1" height="1" />
+		</div>
+		<div style="width:10px; height10px; margin:auto;">
+			<canvas id="chart-areaConsumibles" width="1" height="1" />
+		</div>
+
+<?php
+
+	}
+
+?>
+
+
+	</div>
+
+
+
+
+<!--_____________________________________________________________________________________________________________________________________-->
+
+</div>

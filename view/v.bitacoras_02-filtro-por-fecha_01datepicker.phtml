@@ -1,0 +1,41 @@
+<style>
+
+.hasDatepicker {
+	display: inline-block;
+}
+
+img.ui-datepicker-trigger {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	width: 16%;
+
+}
+
+</style>
+
+<div class="row">
+	<form action="<?= $url ?>" method="get" id="filtrarporfecha">
+	<div class="col-md-1 col-lg-1">
+		<strong>Desde:</strong>
+	</div>
+	<div class="col-md-4 col-lg-4">
+		<div class="input-group input-group-md vista" id="campoparafecha">
+			<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde" placeholder="<?= $fecha_inicio_filtro ?>">
+		</div>
+	</div>
+	<div class="col-md-1 col-lg-1">
+		<strong>Hasta:</strong>
+	</div>
+	<div class="col-md-4 col-lg-4">
+		<div class="input-group input-group-md vista" id="campoparafecha">
+			<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta" placeholder="<?= $fecha_fin_filtro ?>">
+		</div>
+	</div>
+	</form>
+	<div class="col-md-2 col-lg-2">
+		<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha').submit();">
+			<span class="glyphicon glyphicon-filter"></span> Filtrar
+		</button>
+	</div>
+</div>

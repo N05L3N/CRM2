@@ -1,0 +1,470 @@
+<?php
+
+if ($filterDate1 == '--') { $filterDate1 = ''; } else { }
+if ($filterDate2 == '--') { $filterDate2 = ''; } else { }
+
+?>
+
+<?php
+
+
+$total_aestrada = $total_facturados_aestrada + $total_correos_aestrada + $total_llamadas_aestrada + $total_llamadasycorreos_aestrada + $total_descartados_aestrada;
+$total_airigoyen = $total_facturados_airigoyen + $total_correos_airigoyen + $total_llamadas_airigoyen + $total_llamadasycorreos_airigoyen + $total_descartados_airigoyen;
+$total_ckarem = $total_facturados_ckarem + $total_correos_ckarem + $total_llamadas_ckarem + $total_llamadasycorreos_ckarem + $total_descartados_ckarem;
+$total_ealvarez = $total_facturados_ealvarez + $total_correos_ealvarez + $total_llamadas_ealvarez + $total_llamadasycorreos_ealvarez + $total_descartados_ealvarez;
+$total_ggalvan = $total_facturados_ggalvan + $total_correos_ggalvan + $total_llamadas_ggalvan + $total_llamadasycorreos_ggalvan + $total_descartados_ggalvan;
+$total_jhernandez = $total_facturados_jhernandez + $total_correos_jhernandez + $total_llamadas_jhernandez + $total_llamadasycorreos_jhernandez + $total_descartados_jhernandez;
+$total_jvazquez = $total_facturados_jvazquez + $total_correos_jvazquez + $total_llamadas_jvazquez + $total_llamadasycorreos_jvazquez + $total_descartados_jvazquez;
+$total_mramirez = $total_facturados_mramirez + $total_correos_mramirez + $total_llamadas_mramirez + $total_llamadasycorreos_mramirez + $total_descartados_mramirez;
+$total_naguilar = $total_facturados_naguilar + $total_correos_naguilar + $total_llamadas_naguilar + $total_llamadasycorreos_naguilar + $total_descartados_naguilar;
+$total_nenriq = $total_facturados_nenriq + $total_correos_nenriq + $total_llamadas_nenriq + $total_llamadasycorreos_nenriq + $total_descartados_nenriq;
+$total_rlopez = $total_facturados_rlopez + $total_correos_rlopez + $total_llamadas_rlopez + $total_llamadasycorreos_rlopez + $total_descartados_rlopez;
+$total_rrojas = $total_facturados_rrojas + $total_correos_rrojas + $total_llamadas_rrojas + $total_llamadasycorreos_rrojas + $total_descartados_rrojas;
+$total_slopez = $total_facturados_slopez + $total_correos_slopez + $total_llamadas_slopez + $total_llamadasycorreos_slopez + $total_descartados_slopez;
+
+	if ($total_aestrada == 0) { 
+		$Datosaestrada = 'xxxxxx<div class="sinDatos"></div><canvas id="chart-StatusAestrada" width="0" height="0"/>';
+	}
+	else {
+		$Datosaestrada = 'xxxxxx<canvas id="chart-StatusAestrada" width="120" height="120"/>';
+	}
+
+	if ($total_airigoyen == 0) { 
+		$Datosairigoyen = '<div class="sinDatos"></div><canvas id="chart-StatusAirigoyen" width="0" height="0"/>';
+	}
+	else {
+		$Datosairigoyen = '<canvas id="chart-StatusAirigoyen" width="120" height="120"/>';
+	}
+
+	if ($total_ckarem == 0) { 
+		$Datosckarem = '<div class="sinDatos"></div><canvas id="chart-StatusCkarem" width="0" height="0"/>';
+	}
+	else {
+		$Datosckarem = '<canvas id="chart-StatusCkarem" width="120" height="120"/>';
+	}
+
+	if ($total_ealvarez == 0) { 
+		$Datosealvarez = '<div class="sinDatos"></div><canvas id="chart-StatusEalvarez" width="0" height="0"/>';
+	}
+	else {
+		$Datosealvarez = '<canvas id="chart-StatusEalvarez" width="120" height="120"/>';
+	}
+
+	if ($total_ggalvan == 0) { 
+		$Datosggalvan = '<div class="sinDatos"></div><canvas id="chart-StatusGgalvan" width="0" height="0"/>';
+	}
+	else {
+		$Datosggalvan = '<canvas id="chart-StatusGgalvan" width="120" height="120"/>';
+	}
+
+	if ($total_jhernandez == 0) { 
+		$Datosjhernandez = '<div class="sinDatos"></div><canvas id="chart-StatusJhernandez" width="0" height="0"/>';
+	}
+	else {
+		$Datosjhernandez = '<canvas id="chart-StatusJhernandez" width="120" height="120"/>';
+	}
+
+	if ($total_jvazquez == 0) { 
+		$Datosjvazquez = '<div class="sinDatos"></div><canvas id="chart-StatusJvazquez" width="0" height="0"/>';
+	}
+	else {
+		$Datosjvazquez = '<canvas id="chart-StatusJvazquez" width="120" height="120"/>';
+	}
+
+	if ($total_mramirez == 0) { 
+		$Datosmramirez = '<div class="sinDatos"></div><canvas id="chart-StatusMramirez" width="0" height="0"/>';
+	}
+	else {
+		$Datosmramirez = '<canvas id="chart-StatusMramirez" width="120" height="120"/>';
+	}
+
+	if ($total_naguilar == 0) { 
+		$Datosnaguilar = '<div class="sinDatos"></div><canvas id="chart-StatusNaguilar" width="0" height="0"/>';
+	}
+	else {
+		$Datosnaguilar = '<canvas id="chart-StatusNaguilar" width="120" height="120"/>';
+	}
+
+	if ($total_nenriq == 0) { 
+		$Datosnenriq = '<div class="sinDatos"></div><canvas id="chart-StatusNenriq" width="0" height="0"/>';
+	}
+	else {
+		$Datosnenriq = '<canvas id="chart-StatusNenriq" width="120" height="120"/>';
+	}
+
+?>
+
+<style>
+	body {
+		background-color: White;
+	}
+	div.sinDatos {
+		background-color:#EEE;
+		border-radius:120px;
+		width:120px;
+		height:120px;
+		border:1px solid black;
+	}
+</style>
+<form action="<?= $url ?>" method="post" id="filtrarporfecha2">
+<div class="row" style="margin:-90px 0 20px 0;">
+	<div class="col-lg-7 col-md-7 col-sm-7" style=""></div>
+	<div class="col-lg-5 col-md-5 col-sm-5">
+		<div class="row" >
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-1"></div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Desde:</strong>
+					<div class="input-group input-group-md vista" id="campoparafecha">
+						<input type="text" name="filterDate1" onlyread="onlyread" class="form-control datepicker" id="datepickerDesde2" placeholder="<?= $filterDate1 ?>" value="<?= $filterDate1 ?>" style="width:140px;" value="<?= $filterDate1 ?>">
+					</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+				<strong>Hasta:</strong>
+				<div class="input-group input-group-md vista" id="campoparafecha">
+					<input type="text" name="filterDate2" onlyread="onlyread" class="form-control datepicker" id="datepickerHasta2" placeholder="<?= $filterDate2 ?>" value="<?= $filterDate2 ?>" style="width:140px;" value="<?= $filterDate2 ?>">
+				</div>
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+				<br>
+				<button type="button" class="btn btn-default btn-md" onclick="document.getElementById('filtrarporfecha2').submit();" style="margin:auto; margin-right:50px; text-align:left;">
+					<span class="glyphicon glyphicon-filter"></span> Filtrar
+				</button>
+			</div>
+		</div>
+  	</div>
+</div>
+<input type="hidden" name="filtrarporvendedor" value="<?= $filtrarporvendedor ?>">
+<input type="hidden" name="filtrarStatus" value="<?= $filtrarStatus ?>">
+</form>
+
+  <div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Airigoyen</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosAirigoyen ?>
+					</div>
+					<a href="history?vendedor=airigoyen" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_airigoyen ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_airigoyen ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_airigoyen ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_airigoyen ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_airigoyen ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ckarem</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosCkarem ?>
+					</div>
+					<a href="history?vendedor=ckarem" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ckarem ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ckarem ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ckarem ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ckarem ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_ckarem ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ealvarez</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosEalvarez ?>
+					</div>
+					<a href="history?vendedor=ealvarez" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ealvarez ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ealvarez ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ealvarez ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ealvarez ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_ealvarez ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Ggalvan</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosGgalvan ?>
+					</div>
+					<a href="history?vendedor=ggalvan" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_ggalvan ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_ggalvan ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_ggalvan ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_ggalvan ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_ggalvan ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Jhernandez</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosJhernandez ?>
+					</div>
+					<a href="history?vendedor=jhernandez" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_jhernandez ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_jhernandez ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_jhernandez ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_jhernandez ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_jhernandez ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Jvazquez</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosJvazquez ?>
+					</div>
+					<a href="history?vendedor=jvazquez" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_jvazquez ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_jvazquez ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_jvazquez ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_jvazquez ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_jvazquez ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Aestrada</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosAestrada ?>
+					</div>
+					<a href="history?vendedor=aestrada" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_aestrada ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_aestrada ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_aestrada ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_aestrada ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_aestrada ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Mramirez</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosmRamirez ?>
+					</div>
+					<a href="history?vendedor=mramirez" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_mramirez ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_mramirez ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_mramirez ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_mramirez ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_mramirez ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Naguilar</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosNaguilar ?>
+					</div>
+					<a href="history?vendedor=naguilar" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_naguilar ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_naguilar ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_naguilar ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_naguilar ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_naguilar ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%; ">
+			<tr>
+				<td style="vertical-align:middle; text-align:center;">
+					<h5>Nenriq</h5>
+					<div style="width:125px; height125px; margin:auto;">
+						<?= $DatosNenriq ?>
+					</div>
+					<a href="history?vendedor=nenriq" style="text-decoration:none; color:black;"><button type="button" class="btn btn-default btn-xs" style="margin-top:0px;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Bitácora</button></a>
+				</td>
+				<td>
+					<table class="table table-bordered table-striped table-condensed table-hover" style="width:100%;">
+						<tr>
+							<th class=""><span class="label label-success"><?= $total_facturados_nenriq ?></span></th><td>Facturado</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-warning"><?= $total_correos_nenriq ?></span></th><td>Correo</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-info"><?= $total_llamadas_nenriq ?></span></th><td>Llamada</td>
+						</tr>
+						<tr>
+							<th class=""><span class="label label-primary"><?= $total_llamadasycorreos_nenriq ?></span></th><td>Correo y Llamada</td>
+						</tr>
+						<tr>
+							<th style="width:5%;"><span class="label label-default"><?= $total_descartados_nenriq ?></span></th><td style="width:95%;">Descartado</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3">
+	</div>
+</div>

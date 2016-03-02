@@ -1,0 +1,43 @@
+<h6>Orden de Compra (P.O)</h6>
+<?php
+
+	$accionid = $_GET['id'];
+	$ruta = 'img/ordenes/'.$accionid.'/';
+
+	$filehandle = opendir($ruta);
+	
+		while ($file = readdir($filehandle)) {
+      
+        		if ($file != "." && $file != "..") {
+                		
+                		$orden_pass = 1;
+
+                		$tamanyo = GetImageSize($ruta . $file);
+
+?>
+
+<div class="image photo ttip" data-tooltip="<?= $file ?>" alt="">
+	<ul style="list-style:none;">
+		<li>
+			<a onclick="window.open(this.href,'','resizable=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,fullscreen=no,dependent=no,width=400,height=500,status'); return false" href="<?= ''.$ruta.''.$file.'' ?>" style="text-decoration:none;">
+				<span class="glyphicon glyphicon-file"></span> <?= $file ?>
+			</a>        					
+		</li>
+	</ul>
+                			
+<?php
+	
+	$orden_pass++;
+
+?>
+
+</div>
+                		
+<?php
+
+		}
+	}
+	
+	closedir($filehandle);
+
+?>
